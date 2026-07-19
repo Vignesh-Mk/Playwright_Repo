@@ -1,6 +1,11 @@
-console.log("Hello World");
+var firstName = "Vignesh"
+var companyName = "Company name"
+var mobileNumber = 9876543210
+var isAutomation = true
+var hasPlayWright
 
-for(let i = 0; i < 10; i++)
-{
-    console.log("Current loop: " + i)
-}
+console.log(typeof(firstName))
+console.log(typeof(companyName))
+console.log(typeof(mobileNumber))
+console.log(typeof(isAutomation))
+console.log(typeof(hasPlayWright))
