@@ -1,8 +1,8 @@
-var firstName = "Vignesh"
-var companyName = "Company name"
-var mobileNumber = 9876543210
-var isAutomation = true
-var hasPlayWright
+let firstName = "Vignesh"
+let companyName = "Company name"
+let mobileNumber = 9876543210
+let isAutomation = true
+let hasPlayWright
 
 console.log(typeof(firstName))
 console.log(typeof(companyName))
