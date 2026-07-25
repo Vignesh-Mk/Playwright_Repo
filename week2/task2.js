@@ -22,8 +22,8 @@ let input3 = [{ string1: "listen", string2: "silent" }, { string1: "hello", stri
 
 function example1(inputString)
 {
-    let arr = inputString.split(" ");
-    let lastWord = arr[arr.length - 1];
+    let arr = inputString.split(" "); // Split into an array of words
+    let lastWord = arr[arr.length - 1]; // Select the last word (count starts from 0)
     console.log(`Length of the last word '${lastWord}' is ${lastWord.length}`);
 }
 
@@ -31,7 +31,7 @@ function example2(inputString)
 {
     inputString = inputString.trim();
     let arr = inputString.split(" ");
-    let lastWord = arr[arr.length - 1];
+    let lastWord = arr[arr.length - 1]; //Select the last word (count starts from 0)
     console.log(`Length of the last word '${lastWord}' is ${lastWord.length}`);
 }
 
