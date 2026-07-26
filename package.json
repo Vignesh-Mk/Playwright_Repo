@@ -1,0 +1,23 @@
+{
+  "name": "playwright_repo",
+  "version": "1.0.0",
+  "description": "Testleaf Playwright Assignments and stuff",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vignesh-Mk/Playwright_Repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vignesh-Mk/Playwright_Repo/issues"
+  },
+  "homepage": "https://github.com/Vignesh-Mk/Playwright_Repo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^26.1.1"
+  }
+}
