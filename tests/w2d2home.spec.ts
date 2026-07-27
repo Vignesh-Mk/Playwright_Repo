@@ -1,3 +1,18 @@
+// Preconditions:
+// Launch Chromium in non-headless mode
+// - Create a new browser context.
+// - Open a new page within the browser context.
+// - Load the url https://login.salesforce.com/
+// - Use your Salesforce credentials that you’ve created
+
+// Requirements:
+// - Enter the username.
+// - Enter the password.
+// - Click the Login button.
+// - Wait for 10 seconds
+// - Print the page title and the current url of the page
+// - Close the browser
+
 import {test, expect} from '@playwright/test';
 
 test('Salesforce-Login Procedure', async ({browser}) => 
