@@ -21,6 +21,7 @@ test('Assignment-4', async({ browser }) =>
         const password = "TestLeaf@2025";
         const lastName = "Jameson";
         const salutation = "Mr."
+        const firstName = "Michael";
 
         await page.goto(testURL);
 
@@ -43,6 +44,8 @@ test('Assignment-4', async({ browser }) =>
         const panelCont = await page.locator('//*[@class="panel-content scrollable"]');
         await panelCont.getByText("View All", ({ exact: true})).click();
 
+        await expect(page.getByRole('dialog', { name: 'App Launcher'}).getByRole('link', { name: 'Individuals', exact: true})).toBeVisible();
+
         // Search through the list of items in App launcher, click on the item that has the name "Individuals"
         page.getByRole('dialog', { name: 'App Launcher'}).getByRole('link', { name: 'Individuals', exact: true}).click();
 
@@ -64,11 +67,23 @@ test('Assignment-4', async({ browser }) =>
         await page.locator('//*[@class="highlightButton"]').filter({ hasText: "Edit"}).click();
 
         //Update Salutation and first name
-        await expect(page.getByTitle(`Edit ${lastName}`)).toBeVisible();
+        //await expect(page.locator('//*[@class="slds-clearfix slds-card groupDependentFieldEnabled  allow-horizontal-form full-width forceDetailPanelDesktop"]')).toBeVisible();
 
-        await page.getByTitle('Salutation').locator('//*[@class="select"]').click();
+        await page.getByRole('button', ({ name: "Salutation"})).click();
+        await page.getByRole('option', ({name: salutation})).click();
 
-        await page.waitForTimeout(3000);
+        await page.getByPlaceholder('First Name').fill(firstName);
+
+        //Click on save
+        const saveButton = page.getByRole('button', { name: 'Save', exact: true });
+        saveButton.click();
+
+        // Verify if its properly saved:
+        const toastString = `Individual "${firstName} ${lastName} was saved.`;
+
+        await expect(page.getByText(toastString));
+
+        await page.waitForTimeout(5000);
 
         browser.close();
     });
