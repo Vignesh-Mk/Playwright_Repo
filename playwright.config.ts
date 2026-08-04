@@ -42,7 +42,16 @@ export default defineConfig({
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
-    }
+    },
+
+    // For Day 5 task 2 assignment
+    // {
+    //   name: 'Firefox setup for Day 5 task 2',
+    //   use: 
+    //   { ...devices['Desktop Firefox'], 
+    //     baseURL: 'https://www.flipkart.com/',
+    //   },
+    // },
 
     // {
     //   name: 'webkit',
@@ -60,6 +69,16 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
+
+    // For Day 5 task 2 assignment
+    // {
+    //   name: 'Edge setup for Day 5 task 2',
+    //   use: 
+    //   { ...devices['Desktop Edge'], channel: 'msedge', 
+    //     baseURL: 'https://www.redbus.in/', 
+    //   },
+    // },
+
     // {
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
