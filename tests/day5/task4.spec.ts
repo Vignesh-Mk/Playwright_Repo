@@ -20,9 +20,9 @@ test('Assignment 2', async ({ browser  }) =>
         const context = await browser.newContext();
         const page = await context.newPage();
 
-        const testURL = "http://leaftaps.com/opentaps/control/main";
-        const username = "democsr";
-        const password = "crmsfa";
+        const testURL = process.env.LT_URL!;
+        const username = process.env.LT_USERNAME!;
+        const password = process.env.LT_PASSWORD!;
 
         await page.goto(testURL);
 

@@ -15,9 +15,9 @@ test('Testing with selectors', async ({ browser }) =>
         const context = await browser.newContext();
         const page = await context.newPage();
 
-        const testURL = "https://login.salesforce.com/?locale=in";
-        const username = "dilipkumar.rajendran@testleaf.com";
-        const password = "TestLeaf@2025";
+        const testURL = process.env.SF_URL!;
+        const username = process.env.SF_USERNAME!;
+        const password = process.env.SF_PASSWORD!;
 
         await page.goto(testURL);
 

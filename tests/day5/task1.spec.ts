@@ -22,10 +22,10 @@ test('Salesforce-Login', async ({browser}) =>
 
         const newPage = await newContext.newPage();
 
-        const testURL = "https://login.salesforce.com/";
+        const testURL = process.env.SF_URL!;
 
-        const emailID = "dilipkumar.rajendran@testleaf.com";
-        const password = "TestLeaf@2025";
+        const emailID = process.env.SF_USERNAME!;
+        const password = process.env.SF_PASSWORD!;
 
         await newPage.goto(testURL);
 

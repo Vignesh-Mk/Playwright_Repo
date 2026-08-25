@@ -23,10 +23,9 @@ test('Assignment 1 (Locators & Assertions)', async ({ browser}) =>
         const context = await browser.newContext();
         const page = await context.newPage();
 
-        const testURL = "http://leaftaps.com/opentaps/control/main";
-        const username = "Demosalesmanager"; // Was not working when testing, so using
-        const username_backup = "democsr";
-        const password = "crmsfa";
+        const testURL = process.env.LT_URL!;
+        const username = process.env.LT_USERNAME!;
+        const password = process.env.LT_PASSWORD!;
 
         // New Data:
         const companyName = "JB Inc.";
@@ -47,7 +46,7 @@ test('Assignment 1 (Locators & Assertions)', async ({ browser}) =>
         // 2. Enter the username
         // 3. Enter the password
         // 4. Click the Login button
-        await page.locator('#username').fill(username_backup);
+        await page.locator('#username').fill(username);
         await page.locator('#password').fill(password);
         await page.locator('//*[@class="decorativeSubmit"]').click();
 
