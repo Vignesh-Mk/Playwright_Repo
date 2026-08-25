@@ -18,7 +18,9 @@
   "homepage": "https://github.com/Vignesh-Mk/Playwright_Repo#readme",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.1.1"
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "playwright": "^1.62.1"
