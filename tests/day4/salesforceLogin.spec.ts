@@ -37,7 +37,7 @@ test('Salesforce-Login Procedure', async ({browser}) =>
 
         await newPage.getByRole('button', { name: 'Log in' }).click(); // Click on submit button
 
-        await newPage.waitForTimeout(10000); // 1 second = 1000 milliseconds
+        await expect(newPage.title).toContain('Home');
 
         let pageTitle = await newPage.title(); // Get current page's title
         let pageURL = newPage.url(); // Get current page's URL.

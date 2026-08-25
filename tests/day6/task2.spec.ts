@@ -109,8 +109,6 @@ test('Assignment 2 (Locators & Assertions)', async ({ browser }) =>
         await expect(page.locator('#viewLead_annualRevenue_sp')).toContainText("100,000,000.00");
         await expect(page.locator('#viewLead_departmentName_sp')).toHaveText(modifiedDept);
         await expect(page.locator('#viewLead_description_sp')).toHaveText(description);
-        
-        await page.waitForTimeout(4000);
 
         await browser.close();
     });

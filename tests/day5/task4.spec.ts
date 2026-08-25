@@ -71,7 +71,5 @@ test('Assignment 2', async ({ browser  }) =>
         await page.locator('//*[@id="updateLeadForm_companyName"]').fill(changedCompanyName);
         await page.getByRole('button', { name: "Update"}).click();
 
-        await page.waitForTimeout(5000);
-
         browser.close();
     });

@@ -34,14 +34,12 @@ test('Testing with selectors', async ({ browser }) =>
 
         // Click the login button using CSS Selector
         await page.locator('#Login'); // #Login
+        
         // Click the login button using XPath Selector
-        await page.locator('//*[@id="Login"]').click(); //*[@id="Login"]
-
-        await page.waitForTimeout(10000); // 1 second = 1000 milliseconds
+        await page.locator('//*[@id="Login"]').click();
 
         // Checking for a specific element on the landing page to verify successful login.
         await expect(page).toHaveTitle('Home | Salesforce');
-        //await expect(page.getByRole('heading', { name: 'Marketing CRM Classic' })).toBeVisible();
 
         browser.close();
     });

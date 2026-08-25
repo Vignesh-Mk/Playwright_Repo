@@ -83,7 +83,5 @@ test('Assignment-4', async({ browser }) =>
 
         await expect(page.getByText(toastString));
 
-        await page.waitForTimeout(5000);
-
         browser.close();
     });

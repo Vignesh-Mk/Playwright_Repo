@@ -112,8 +112,6 @@ test('Assignment 1 (Locators & Assertions)', async ({ browser}) =>
         expect(displayedFirstName).toBe(firstName);
         expect(displayedLastName).toBe(lastName);
         expect(displayedStatus).toBe("Assigned");
-        
-        await page.waitForTimeout(3000);
 
         await browser.close();
     });

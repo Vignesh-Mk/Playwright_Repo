@@ -59,7 +59,5 @@ test('Assignment-3', async({ browser}) =>
 
         await expect(page.locator('//*[@class="uiOutputText"]')).toHaveText(lastName);
 
-        await page.waitForTimeout(5000);
-
         browser.close();
     });

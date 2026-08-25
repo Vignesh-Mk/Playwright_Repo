@@ -82,7 +82,5 @@ test('Assignment 1', async ({ browser }) =>
         // Verify if the Lead has been saved properly
         await expect(page.locator('lightning-formatted-name')).toContainText(`${salutation} ${ firstName} ${lastName}`);
 
-        await page.waitForTimeout(5000);
-
         browser.close();
     });

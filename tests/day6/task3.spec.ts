@@ -91,7 +91,5 @@ test('Assignment 3 (Locators & Assertions)', async ({ browser }) =>
 
         await expect(page.locator('//*[@class="toastMessage slds-text-heading--small forceActionsText"]')).toHaveText(toastMsg);
 
-        await page.waitForTimeout(1000);
-
         await browser.close();
     });
